@@ -1,0 +1,94 @@
+:root {
+  /* (main BG) */
+  --Very-dark-blue: hsl(217, 54%, 11%);
+  /* (card BG) */
+  --Very-dark-blue-section: hsl(216, 50%, 16%);
+  /* (line) */
+  --Very-dark-blue-card: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  /* (paragraph) */
+  --Font-size-p: 18px;
+}
+body {
+  font-family: "Outfit", sans-serif;
+}
+p {
+  font-size: var(--Font-size-p);
+}
+a {
+  text-decoration: none;
+}
+
+section {
+  height: 100vh;
+  background-color: var(--Very-dark-blue-section);
+}
+.card {
+  color: var(--Soft-blue);
+  transform: translatey(100px);
+  border-radius: 1rem;
+  padding: 20px;
+  background-color: var(--Very-dark-blue-card);
+  box-shadow: 10px 10px 10px 10px #13101073;
+}
+
+.image {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.image .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(178, 100%, 50%, 0.575);
+  border-radius: 10px;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.image .overlay svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.card .image img {
+  border-radius: 10px;
+}
+.image:hover .overlay {
+  opacity: 1;
+}
+.card .content {
+  color: var(--Soft-blue);
+  margin-bottom: 1.2rem;
+}
+
+.card .content h3 {
+  color: var(--White);
+}
+.card .content h3:hover {
+  color: var(--Cyan);
+}
+
+.card .content .time .date {
+  float: right;
+}
+.card-footer {
+  border-color: var(--Soft-blue);
+}
+
+.card-footer img {
+  width: 30px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+}
+.card-footer a {
+  color: var(--White);
+}
+.card-footer a:hover {
+  color: var(--Cyan);
+}
